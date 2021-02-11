@@ -1,0 +1,95 @@
+#product {
+  font-family: 'Okta Neue', sans-serif;
+  button, input {
+    outline: none;
+  }
+  #with-photos {
+    &:checked + .check-wrap {
+      .check-icon {
+        opacity: 1;
+      }
+    }
+  }
+  .nav-cell {
+    &.is-selected {
+      border-color: theme('colors.gray.350');
+    }
+  }
+  .nav-slider {
+    .flickity-button {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      &:disabled {
+        opacity: .2;
+      }
+      &.next {
+        right: .5rem;
+      }
+      &.previous {
+        left: .5rem;
+      }
+    }
+  }
+  .size-item {
+    @apply font-medium text-gray-350 text-base py-5 text-center border border-solid border-gray-200 w-20 border-r-0;
+    &:last-child {
+      @apply border border-solid border-gray-200 rounded-r;
+    }
+    &:first-child {
+      @apply rounded-l;
+    }
+    &.active {
+      @apply text-white bg-black;
+    }
+  }
+  .counter-wrap {
+    input {
+      border: 0;
+      &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+        appearance: none;
+        margin: 0;
+      }
+    }
+  }
+  .main-rating {
+    .star-rating {
+      background: url("/images/icons/main-star-gray.svg") !important;
+      .star-value{
+        background: url("/images/icons/main-star-orange.svg") !important;
+      }
+    }
+  }
+  .rating-wrap {
+    .star-rating {
+      background: url("/images/icons/star-gray.svg") !important;
+      .star-value{
+        background: url("/images/icons/star-orange.svg") !important;
+      }
+    }
+  }
+  .tooltip-wrap {
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -.55rem;
+      left: 0;
+      right: 0;
+      width: 1rem;
+      height: 1rem;
+      margin: auto;
+      transform: rotate(45deg);
+      background: white;
+      border-right: 1px solid theme('colors.gray.200');
+      border-bottom: 1px solid theme('colors.gray.200');
+    }
+  }
+  .modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,30 @@
+.promo-block {
+    background: rgba(0, 0, 0, .3);
+}
+.promo-title {
+    font-size: 2.625rem;
+}
+.block-title {
+    &:before {
+        content: "\2022";
+        color: theme('colors.orange.350');
+        @apply font-bold inline-block w-4;
+    }
+    &.block-title__center {
+        &:before {
+            @apply block mx-auto;
+        }
+    }
+}
+.collection-block {
+    .collection-title {
+        font-size: 2.875rem;
+        background: rgba(0, 0, 0, .27);
+        @screen xl {
+            @apply text-4xl;
+        }
+        @screen 2xs {
+            @apply text-3xl;
+        }
+    }
+}

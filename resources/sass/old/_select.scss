@@ -1,0 +1,90 @@
+.product-select-wrapper {
+  &.small {
+    .ss-main {
+      min-width: 130px;
+      .ss-content {
+        min-width: 150px;
+        .ss-list {
+          padding: 0 7px;
+          max-height: 175px;
+          &::-webkit-scrollbar {
+            width: 10px;
+          }
+          .ss-option {
+            padding: 6px 6px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    &.select-sort {
+      .ss-main {
+        min-width: 25px;
+        .ss-content {
+          min-width: 150px;
+        }
+      }
+    }
+  }
+  .ss-main {
+    min-width: 235px;
+    .ss-single-selected {
+      background-color: transparent;
+      border-radius: 0;
+      border: none;
+      padding: 0;
+      .placeholder {
+        padding-right: 5px;
+      }
+      .ss-arrow {
+        margin: 0;
+        .arrow-down, .arrow-up {
+          background: url("/images/icons/select-arrow.svg") center no-repeat;
+          border: none;
+          background-size: 10px 10px;
+          width: 10px;
+          height: 12px;
+          transform: rotate(0deg);
+          margin-top: 2px;
+        }
+      }
+    }
+    .ss-content {
+      margin: 2px 0;
+      padding: 18px 6px 10px 0;
+      border-radius: 0 0 .25rem .25rem;
+      border: none;
+      @apply bg-gray-50 w-full shadow;
+      .ss-list {
+        max-height: 200px;
+        padding: 0 12px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          width: 15px;
+        }
+        &::-webkit-scrollbar-track {
+          background: theme('colors.gray.350');
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: theme('colors.gray.520');
+        }
+        .ss-option {
+          font-weight: 600;
+          margin-bottom: 5px;
+          padding: 9px 16px;
+          transition: .2s all ease;
+          @apply border-2 border-solid border-gray-530 text-gray-530 cursor-pointer rounded overflow-hidden;
+          &.ss-option-selected {
+            @apply bg-orange-450 border-orange-450 text-white;
+            &:hover {
+              @apply bg-orange-450 border-orange-450 text-white;
+            }
+          }
+          &:hover {
+            @apply bg-transparent text-orange-450;
+          }
+        }
+      }
+    }
+  }
+}
